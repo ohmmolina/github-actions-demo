@@ -25,4 +25,13 @@ describe('Sorting function', () => {
         const sortedArray = sortObjectsArray(objectsArray, 'name', 'desc')
         expect(sortedArray).toStrictEqual(expectedArray)
     })
+    test('Sort error', () => {
+        const expectedArray = [
+            { id: 2, name: 'Carlos'},
+            { id: 3, name: 'Max'},
+            { id: 1, name: 'Sergio'},
+        ]
+        const sortedArray = sortObjectsArray(objectsArray)
+        expect(sortedArray).toStrictEqual(expectedArray)
+    })
 })
